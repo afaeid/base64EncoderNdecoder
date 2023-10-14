@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Encode your text</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ <div class="card">
+
+  <div class="card-header">
+   <h1>Encode your Text</h1>
+  </div>
+  <div class="card-body">
+   <form>
+    <div class="input-field">
+     <p>Give your plain text in the box below</p>
+     <textarea name="" id="input-textarea" cols="30" rows="5" placeholder="Type your plain Text here"></textarea>
+     <div class="response-field"></div>
+    </div>
+    <div class="output-field">
+     <textarea name="" id="output-textarea" cols="30" rows="5" readonly></textarea>
+    </div>
+    <div class="button">
+     <button type="submit">Encode</button>
+     <button class="copy-btn">Copy</button>
+    </div>
+    <div class="footer-navigation">
+     <button><a href="index.html">← Go to main page</a></button>
+    </div>
+   </form>
+  </div>
+ </div>
+
+ <script src="encode.js"></script>
+ <script>
+  var outputField = document.getElementById("output-textarea")
+  var copyButton = document.querySelector("button.copy-btn")
+
+  copyButton.addEventListener("click", () => {
+   if (outputField.value !== "") {
+    outputField.select();
+    document.execCommand("copy");
+   }
+  })
+ </script>
+</body>
+
+</html>
