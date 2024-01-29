@@ -1,6 +1,5 @@
 var form = document.querySelector("form");
 
-
 const encodePlainText = (input, output)=>{
   try {
   var plainText = input.value;
@@ -18,8 +17,6 @@ var inputField = document.getElementById("input-textarea");
 inputField.addEventListener("keyup", ()=>{
  encodePlainText(document.getElementById("input-textarea"), document.getElementById("output-textarea"))
 })
-
-
 
 form.addEventListener("submit", (e) => {
  e.preventDefault();
