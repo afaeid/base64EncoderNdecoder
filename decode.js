@@ -24,6 +24,3 @@ form.addEventListener("submit", (e) => {
  var outputField = document.getElementById("output-textarea")
  decodeEncodedText(document.getElementById("input-textarea"), document.getElementById("output-textarea"))
 })
-
-
-/*Hello*/
